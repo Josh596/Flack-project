@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.1/socket.io.js"></script>
+        <script src = 'C:\Users\JOSHUA\Desktop\Flack\Flack-project\static\index.js'></script>
+        <link rel="stylesheet" type="text/css" href='C:\Users\JOSHUA\Desktop\Flack\Flack-project\static\styles.css'>
+        <title>Flack app</title>
+
+
+    </head>
+
+<body>
+  <ul>
+<li><a id="active" href="#home">Home</a></li>
+</ul>
+
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <form id="register">
+    <input placeholder="What is your name" class="register_form">
+    <button class="register_button">Register</button>
+    </form>
+  </div>
+
+</div>
+<div class="main">
+<div class="grid-container">
+  <div class="item1">
+    <div class="create_channel">
+      <p>Create new Channel :</p>
+         <form>
+           <input type="text" placeholder="Channel name" class="channel_form" autofocus='off' autocomplete="off">
+           <button class="submit_channel" type="submit">Create</button>
+         </form>
+      </div>
+
+      <div class="channel_list">
+        channel list
+      </div>
+  </div>
+
+  <div class="item2">
+    <div class="channel_name">General channel</div>
+  </div>
+
+  <div class="item3">
+    <div class="input_message">
+      <input class="message_form" placeholder="Send your text" autofocus='off' autocomplete="off">
+      <button type="submit" class="submit_message">Send</button>
+    </div>
+  </div>
+
+
+</div>
+</div>
+
+<footer>Project by Josh</footer>
+</body>
+
+</html>

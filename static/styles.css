@@ -1,0 +1,207 @@
+
+
+html, body { height: 100%; width: 100%; margin: 0; }
+body{
+  background-color: grey;
+}
+    ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: #333;
+}
+
+li {
+float: left;
+}
+
+li a {
+display: block;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+
+li a:hover {
+background-color: #111;
+}
+
+.main{
+margin-top: 5%;
+border: 2px solid black;
+margin-left: 5%;
+margin-right: 5%;
+height: 80%;
+background-color: white;
+}
+
+.grid-container{
+height: 100%;
+width: 100%;
+display: inline-grid;
+grid-template-rows: 20% 80%;
+grid-template-columns: 27% 73%
+
+}
+.item{
+width: 100%;
+height: 100%;
+}
+.item1{
+border-right: 2px solid black;
+grid-column-start: 1;
+grid-column-end: 2;
+grid-row-start: 1;
+grid-row-end: 3;
+}
+
+.item2{
+background-color: lightgreen;
+grid-column: 2/3;
+border-bottom: 3px solid black;
+}
+
+.create_channel{
+margin-top: 20%;
+padding-left: 5%;
+padding-bottom: 5%;
+border-bottom: 2px solid black;
+
+}
+
+.create_channel p{
+padding-left: 5%;
+font-size: auto;
+font-weight: bold;
+}
+
+.channel_form {
+width: 70%;
+margin-left: 0.2%;
+padding: 3.5% 1.5%;
+display: inline-block;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
+}
+.submit_channel  {
+background-color: #4CAF50; /* Green */
+border: none;
+color: white;
+padding: 4.5% 5.5% ;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 11px;
+border-radius: 6%;
+cursor: pointer;
+}
+
+.channel_name{
+font-weight: bold;
+font-size: 35px;
+text-align: left;
+margin-left: 2%;
+margin-top: 5%;
+}
+.item3{
+background-color: pink;
+position: relative;
+width: 100%;
+overflow-y: scroll;
+}
+
+.message_form, .register_form{
+width: 70%;
+margin-left: 2%;
+padding: 15px 20px;
+display: inline-block;
+border: 1px solid #ccc;
+border-radius: 4px;
+
+box-sizing: border-box;
+}
+.input_message {
+position: absolute;
+bottom: 1%;
+width: 100%;
+}
+.submit_message{
+background-color: #4CAF50; /* Green */
+border: none;
+color: white;
+padding: 15px 32px ;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 14px;
+border-radius: 4px;
+cursor: pointer;
+box-sizing: border-box;
+margin-left: 2px;
+}
+
+/* The Modal (background) */
+.modal {
+display: none; /* Hidden by default */
+position: fixed; /* Stay in place */
+z-index: 1; /* Sit on top */
+padding-top: 10%; /* Location of the box */
+left: 0;
+top: 0;
+width: 100%; /* Full width */
+height: 100%; /* Full height */
+overflow: auto; /* Enable scroll if needed */
+background-color: rgb(0,0,0); /* Fallback color */
+background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+background-color:grey;
+margin: auto;
+padding: auto;
+border: 1px solid #888;
+width: 30%;
+height: 25%;
+}
+.register_form, .register_button{
+margin-top: 5%;
+margin-left: 5%;
+}
+
+/* The Close Button */
+.close {
+color: #aaaaaa;
+float: right;
+font-size: 28px;
+font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+color: #000;
+text-decoration: none;
+cursor: pointer;
+}
+.register_button{
+width: 70%;
+margin-left: 10%;
+padding: 15px 20px;
+display: inline-block;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
+}
+.register_form{
+float: none;
+margin-left: 10%;
+}
+
+
+
+
+
+   
