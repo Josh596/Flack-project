@@ -4,8 +4,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.1/socket.io.js"></script>
-        <script src = 'C:\Users\JOSHUA\Desktop\Flack\Flack-project\static\index.js'></script>
-        <link rel="stylesheet" type="text/css" href='C:\Users\JOSHUA\Desktop\Flack\Flack-project\static\styles.css'>
+        <script src = "{{ url_for('static', filename='index.js') }}"></script>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
         <title>Flack app</title>
 
 
@@ -40,7 +40,12 @@
       </div>
 
       <div class="channel_list">
-        channel list
+        {% for channel in channels %}
+        <div class = 'user_channel'>
+          
+        </div>
+        </div>
+        {% endfor %}
       </div>
   </div>
 
