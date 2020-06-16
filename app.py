@@ -10,7 +10,7 @@ channel_member = {}
 messages = {}
 #Creating the message class
 #Each message should be passed as a dictionary
-class Messages():
+class Settings():
 	def __init__(self,channels, channel_member, messages):
 		self.channels = channels
 		self.channel_member = channel_member
@@ -38,7 +38,7 @@ class Messages():
 				channel_member.get(key).append(value)
 		
 
-main_class = Messages(channels, channel_member, messages)
+chat = Settings(channels, channel_member, messages)
 @app.route('/')
 def index():
 	return render_template('layout.html', channels = channels, channel_member = channel_member, messages = messages)
@@ -56,10 +56,10 @@ def channel(data):
 		channel = {'alert': 'Channel created'}
 	return channel
 
-main_class.add_messages({'General':"My message"})
+chat.add_messages({'General':"My message"})
 
-main_class.add_channel('Best')
-main_class.add_messages({'Best':"My gee"})
+chat.add_channel('Best')
+chat.add_messages({'Best':"My gee"})
 
 if __name__ == "__main__":
 	socketio.run(app, debug = True)

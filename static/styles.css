@@ -51,9 +51,11 @@ grid-column-start: 1;
 grid-column-end: 2;
 grid-row-start: 1;
 grid-row-end: 3;
-
 }
-
+.item{
+  height: 100%;
+  width: 100%;
+}
 .item2{
 background-color: lightgreen;
 grid-column: 2/3;
@@ -62,14 +64,16 @@ border-bottom: 3px solid black;
 
 
 .create_channel{
-margin-top: 20%;
+
 padding-left: 5%;
 padding-bottom: 5%;
 border-bottom: 2px solid black;
+height: 30%;
 
 }
 
 .create_channel p{
+padding-top: 20%;
 padding-left: 5%;
 font-size: auto;
 font-weight: bold;
@@ -197,7 +201,15 @@ box-sizing: border-box;
 float: none;
 margin-left: 10%;
 }
-
+.channel_list{
+  height: 70%;
+  width: 100%;
+  background-color: red;
+}
+.user_channel{
+  height: 100%;
+  width: 100%;
+}
 
 
 
