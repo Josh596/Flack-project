@@ -59,6 +59,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
   };
 
+  //When a channel is clicked upon
+  document.querySelectorAll('.channels').forEach(channel => {
+    channel.onclick = () =>{
+      const channel_name =  channel.innerHTML 
+      document.querySelector('.channel_name').innerHTML = channel_name
+      socket.emit('load_channel', channel_name)
+    }
+  });
+
+
+//All socket io are here
+socket.on('load_channel', data => {
+ for(var key in data){
+   for(var info in key ){
+      if(info = storage.getItem('username')){
+        console.log(info)
+      }
+   }
+  }
+});
+
+
 
 
   });
