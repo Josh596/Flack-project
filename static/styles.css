@@ -41,25 +41,27 @@ background-color: white;
 height: 100%;
 width: 100%;
 display: inline-grid;
-grid-template-rows: 20% 80%;
+grid-template-rows: 30% 70%;
 grid-template-columns: 27% 73%;
 }
 
 .item1{
-border-right: 2px solid black;
 grid-column-start: 1;
 grid-column-end: 2;
-grid-row-start: 1;
-grid-row-end: 3;
+grid-row: 1/2;
+border-bottom: 2px solid black;
 }
-.item{
-  height: 100%;
-  width: 100%;
-}
+
 .item2{
 background-color: lightgreen;
 grid-column: 2/3;
-border-bottom: 3px solid black;
+border-bottom: 2px solid black;
+border-left: 2px solid black;
+}
+.item4{
+  grid-row: 2/3;
+  height: 100%;
+  width: 100%;
 }
 
 
@@ -67,7 +69,6 @@ border-bottom: 3px solid black;
 
 padding-left: 5%;
 padding-bottom: 5%;
-border-bottom: 2px solid black;
 height: 30%;
 
 }
@@ -112,6 +113,7 @@ margin-top: 5%;
 background-color: pink;
 position: relative;
 width: 100%;
+border-left: 2px solid black;
 overflow-y: scroll;
 }
 
@@ -202,16 +204,53 @@ float: none;
 margin-left: 10%;
 }
 .channel_list{
-  height: 70%;
-  width: 100%;
-  background-color: red;
-}
-.user_channel{
   height: 100%;
   width: 100%;
+
+  
+}
+.user_channel{
+  width: 100%;
+  height: 100%;
+  padding-top: 10% ; 
 }
 
-
+.channels{
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold; 
+  display: block;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  border-bottom: 2px solid lime;
+  margin-right: 10%;
+  margin-left: 10%;
+  border-radius: 5%;
+  margin-top: 5%;
+  background-color: lightsalmon;
+  text-align: center;
+}
+.channels:hover{
+  background-color: greenyellow;
+}
+.message-box{
+  display: inline-block;
+  margin-top: 1.5%;
+  padding: 1% 5%;
+  box-sizing: border-box;
+  border-radius: 22px ;
+}
+.private{
+  background-color: indigo;
+  float: right;
+  margin-right: 1.5%;
+}
+.public{
+  background-color: grey;
+  float:left;
+  clear: right;
+  margin-left: 1.5%;
+}
 
 
    

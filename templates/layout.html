@@ -38,16 +38,19 @@
            <button class="submit_channel" type="submit">Create</button>
          </form>
       </div>
-
+    </div>
+  <div class="item4">
       <div class="channel_list">
-        {% for channel in channels %}
         <div class = 'user_channel'>
-             <a id="channels" href = "" >{{ channel }}</a>
+          {% for channel in channels %}
+             <a class="channels" href = "#" >{{channel}}</a>
+             {% endfor %}
         </div>
-
+        
         </div>
-        {% endfor %}
+        
       </div>
+      
   
 
   <div class="item2">
@@ -55,6 +58,8 @@
   </div>
 
   <div class="item3">
+    <div class="message-box private">private</div>
+    <div class="message-box public">public</div>
     <div class="input_message">
       <input class="message_form" placeholder="Send your text" autofocus='off' autocomplete="off">
       <button type="submit" class="submit_message">Send</button>
