@@ -36,7 +36,9 @@ class Settings():
 		if type(user) is dict:
 			for key, value in user:
 				channel_member.get(key).append(value)
-		
+	
+	
+			
 
 chat = Settings(channels, channel_member, messages)
 @app.route('/')
@@ -48,18 +50,29 @@ def text(data):
 	messages[data[channel]].append(data[messages]) 
 	
 @socketio.on('new_channel')
-def channel(data):
+def new_channel(data):
 	if data in channels:
 		channel = {'alert':'Channel already exists'}
 	else:
 		channels.append(data)
 		channel = {'alert': 'Channel created'}
 	return channel
-
-chat.add_messages({'General':"My message"})
-
+chat.add_channel('General')
+chat.add_messages({'General':{'Josh':"My message"}})
+chat.add_messages({'General':{'Lola':"My message"}})
+chat.add_messages({'General':{'Emma':"My main_guy"}})
 chat.add_channel('Best')
 chat.add_messages({'Best':"My gee"})
+
+@socketio.on('load_channel')
+def load_channel(data):
+	channel_message = messages[data]
+	emit('load_channel', {'channel_message':channel_message}, broadcast = True)
+
+
+
+
+print(messages['General'])
 
 if __name__ == "__main__":
 	socketio.run(app, debug = True)
