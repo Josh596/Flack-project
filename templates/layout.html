@@ -33,7 +33,7 @@
   <div class="item1">
     <div class="create_channel">
       <p>Create new Channel :</p>
-         <form>
+         <form class="new_channel">
            <input type="text" placeholder="Channel name" class="channel_form" autofocus='off' autocomplete="off">
            <button class="submit_channel" type="submit">Create</button>
          </form>
@@ -42,9 +42,12 @@
   <div class="item4">
       <div class="channel_list">
         <div class = 'user_channel'>
+          <a class="channels" id="general_channel" href = "#" >General</a>
           {% for channel in channels %}
+            {% if channel != 'General'%}
              <a class="channels" href = "#" >{{channel}}</a>
-             {% endfor %}
+            {% endif %}
+          {% endfor %}
         </div>
         
         </div>
@@ -53,16 +56,22 @@
       
   
 
-  <div class="item2">
-    <div class="channel_name">General channel</div>
+    <div class="item2">
+    <div class="channel_name">{{present_channel}}</div>
   </div>
 
   <div class="item3">
-    <div class="message-box private">private</div>
-    <div class="message-box public">public</div>
+    <div class="message-div">
+        
+      <div><div class="message-box public">Hi, welcome to the general channel</div></div>
+     </div>
+
+
     <div class="input_message">
+      <form class="new_message">
       <input class="message_form" placeholder="Send your text" autofocus='off' autocomplete="off">
       <button type="submit" class="submit_message">Send</button>
+    </form>
     </div>
   </div>
 

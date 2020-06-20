@@ -62,6 +62,7 @@ border-left: 2px solid black;
   grid-row: 2/3;
   height: 100%;
   width: 100%;
+  overflow-y: auto;
 }
 
 
@@ -114,7 +115,7 @@ background-color: pink;
 position: relative;
 width: 100%;
 border-left: 2px solid black;
-overflow-y: scroll;
+height: 100%;
 }
 
 .message_form, .register_form{
@@ -233,24 +234,30 @@ margin-left: 10%;
 .channels:hover{
   background-color: greenyellow;
 }
+.message-div{
+  height: 89%;
+  overflow-y: auto;
+}
 .message-box{
   display: inline-block;
-  margin-top: 1.5%;
   padding: 1% 5%;
   box-sizing: border-box;
   border-radius: 22px ;
+  margin-top:1.5%;
 }
 .private{
   background-color: indigo;
   float: right;
+  clear: both;
   margin-right: 1.5%;
 }
 .public{
   background-color: grey;
   float:left;
-  clear: right;
+  clear: both;
   margin-left: 1.5%;
 }
+
 
 
    
